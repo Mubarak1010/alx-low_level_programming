@@ -10,6 +10,7 @@ int main(void)
 	char au[26] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 	int i;
+
 	for (i = 0; i < 26; i++)
 	{
 		putchar(al[i]);
