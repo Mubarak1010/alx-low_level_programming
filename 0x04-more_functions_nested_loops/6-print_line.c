@@ -2,11 +2,10 @@
 /**
  * print_line - function that draws a straight line in the terminal
  * @n: number of length
- * Return: void
  */
 void print_line(int n)
 {
-	if (n <= o)
+	if (n <= 0)
 	{
 		_putchar('\n');
 	}
