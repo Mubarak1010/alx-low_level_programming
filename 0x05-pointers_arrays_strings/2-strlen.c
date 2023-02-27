@@ -3,11 +3,12 @@
 /**
  * _strlen - function that returns the length of a string
  * @s: pointer to the string
+ * Return: legnth of s
  */
 
-size_t _strlen(const char *s)
+int _strlen(const char *s)
 {
-	size_t len = 0;
+	int len = 0;
 
 	while (*s++)
 		len++;
