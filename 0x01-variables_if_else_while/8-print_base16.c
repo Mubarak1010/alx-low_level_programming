@@ -9,9 +9,9 @@ int main(void)
 {
 	char alp;
 
-	for (alp = '1'; alp < '10'; alp++)
+	for (alp = '1'; alp <= '9'; alp++)
 		putchar(alp);
-	for (alp = 'a'; alp < 'g'; alp++)
+	for (alp = 'a'; alp <= 'f'; alp++)
 		putchar(alp);
 	putchar('\n');
 
