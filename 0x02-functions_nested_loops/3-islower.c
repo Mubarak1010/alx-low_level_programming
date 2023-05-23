@@ -2,14 +2,15 @@
 
 /**
  * _islower - Program entry
- * c: char to check
- * Return: 1 if c is lowercase,0 otherwise.
+ * @c: char to check for
+ * Return: 1 if c is lowercase,
+ * 0 otherwise.
  */
 
 int _islower(int c)
 {
-	if (c = 97 && c <= 122)
+	if (c >= 97 && c <= 122)
 		return (1);
-	else if (c = 65; c <= 90; c++)
+	else if (c >= 65 && c <= 90)
 		return (0);
 }
