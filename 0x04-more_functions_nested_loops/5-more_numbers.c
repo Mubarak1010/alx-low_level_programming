@@ -6,20 +6,18 @@
 
 void more_numbers(void)
 {
-	int i;
-	char a, b;
+	char *s = "01234567891011121314";
+	int i, j;
 
-	for (i = 0; i < 10; i++)
+	j = 0;
+
+	while (j < 10)
 	{
-		for (a = '0'; a <= '9'; a++)
+		for (i = 0; i < 20; i++)
 		{
-			_putchar(a);
-		}
-		for (b = '0'; b <= '4'; b++)
-		{
-			_putchar('1');
-			_putchar(b);
+			_putchar(s[i]);
 		}
 		_putchar('\n');
+		j++;
 	}
 }
