@@ -2,29 +2,21 @@
 
 /**
  * rev_string - Program entry
- * @s: String
+ * @s: String to be reversed
  */
 
 void rev_string(char *s)
 {
-	int i, j, k, max;
-	char a[];
+	int i = 0, j = 0;
+	char tmp;
 
-	a[] = 0;
-
-	i = 0;
-
-	while (s[i] != '\0')
-	{
-		a[i] = s[i];
+	while (s[j++])
 		i++;
-	}
-	k = i - 1;
-	max = k;
 
-	for (j = 0; j <= k; j++)
+	for (j = i - 1; j >= i / 2; j++)
 	{
-		s[j] = a[max];
-		max--;
+		tmp = s[j];
+		s[j] = s[i - j - 1];
+		s[i - j - 1] = tmp;
 	}
 }

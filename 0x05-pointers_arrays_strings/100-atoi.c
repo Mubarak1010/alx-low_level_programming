@@ -2,30 +2,36 @@
 
 /**
  * _atoi - Program entry
- * @s: String in consideration
- * Return: number, if there's number
- * if there's no number, return 0
+ * @s: String
+ * Return: numbers in the string
+ * 0, if no numbers
  */
 
 int _atoi(char *s)
 {
-	unsigned int i;
-	char num, sign;
+	unsigned long i;
+	char *num, *sign;
+	int j, k;
 
 	i = 0;
 
 	while (s[i] != '\0')
 	{
-		if (s[i] >= '0' && s[i] <= '9')
-		{
-			if (s[i - 1] == '+' || s[i - 1] == '-')
-			{
-				sign = s[i - 1];
-			}
-			num = s[i];
-			return (sign + num);
-		}
 		i++;
 	}
-	return (0);
+	k = i - 1;
+
+	j = 0;
+
+	while (j <= k)
+	{
+		if (s[j] >= '0' && s[j] <= '9')
+		{
+			if (s[j - 1] == '+' || s[j - 1] == '-')
+				*sign = s[j - 1];
+			*(num + j) = s[j];
+		}
+		j++;
+	}
+	return (*sign + *num);
 }
