@@ -15,7 +15,10 @@ void puts_half(char *str)
 	{
 		i++;
 	}
-	k = i / 2;
+	if (i % 2 == 0)
+		k = i / 2;
+	else
+		k = (i / 2) + 1;
 	j = i - 1;
 
 	while (k <= j)

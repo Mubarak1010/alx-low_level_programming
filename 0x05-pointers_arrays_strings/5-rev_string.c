@@ -2,28 +2,29 @@
 
 /**
  * rev_string - Program entry
- * @s: String in consideration
+ * @s: String
  */
 
 void rev_string(char *s)
 {
-	int i, j, k;
-	char *str;
+	int i, j, k, max;
+	char a[];
+
+	a[] = 0;
 
 	i = 0;
-	k = 0;
 
 	while (s[i] != '\0')
 	{
+		a[i] = s[i];
 		i++;
 	}
+	k = i - 1;
+	max = k;
 
-	j = i - 1;
-
-	while (j >= 0)
+	for (j = 0; j <= k; j++)
 	{
-		str[k] = s[j];
-		k++;
-		j--;
+		s[j] = a[max];
+		max--;
 	}
 }
