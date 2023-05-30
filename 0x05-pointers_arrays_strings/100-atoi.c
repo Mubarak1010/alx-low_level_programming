@@ -4,34 +4,34 @@
  * _atoi - Program entry
  * @s: String
  * Return: numbers in the string
- * 0, if no numbers
+ * 0, if otherwise
  */
 
 int _atoi(char *s)
 {
-	unsigned long i;
-	char *num, *sign;
-	int j, k;
+	int a = 0;
+	unsigned int i = 0;
+	int min = 1;
+	int j = 0;
 
-	i = 0;
-
-	while (s[i] != '\0')
+	while (s[a])
 	{
-		i++;
-	}
-	k = i - 1;
-
-	j = 0;
-
-	while (j <= k)
-	{
-		if (s[j] >= '0' && s[j] <= '9')
+		if (s[a] == 45)
 		{
-			if (s[j - 1] == '+' || s[j - 1] == '-')
-				*sign = s[j - 1];
-			*(num + j) = s[j];
+			min *= -1;
 		}
-		j++;
+		while (s[a] >= 48 && s[a] <= 57)
+		{
+			j = 1;
+			i = (i * 10) + (s[a] - '0');
+			a++;
+		}
+		if (j == 1)
+		{
+			break;
+		}
+		a++;
 	}
-	return (*sign + *num);
+	i *= min;
+	return (i);
 }
