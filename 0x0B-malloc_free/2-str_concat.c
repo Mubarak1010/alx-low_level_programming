@@ -11,7 +11,7 @@
 
 char *str_concat(char *s1, char *s2)
 {
-	int index, size1, size2, num, sum = size1 + size2;
+	int index, size1, size2, num, sum;
 	char *s3;
 
 	size1 = 0;
@@ -26,6 +26,8 @@ char *str_concat(char *s1, char *s2)
 
 	while (s2[size2] != '\0')
 		size2++;
+
+	sum = size1 + size2;
 
 	s3 = malloc(sizeof(char) * sum);
 
