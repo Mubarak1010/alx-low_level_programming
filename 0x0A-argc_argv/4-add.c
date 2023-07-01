@@ -9,12 +9,32 @@
 
 int main(int argc, char **argv)
 {
-	if (argc < 2)
+	int index;
+	unsigned int i, sum = 0;
+	char *str;
+
+	if (argc > 1)
+	{
+		for (index = 1; index < argc; index++)
+		{
+			str = argv[i];
+
+			for (i = 0; i < strlen(str); i++)
+			{
+				if (str[i] < 48 || str[i] > 57)
+				{
+					printf("Error\n");
+					return (1);
+				}
+			}
+			sum += atoi(str);
+			str++;
+		}
+		printf("%d\n", sum);
+	}
+	else
 	{
 		printf("0\n");
 	}
-	
-	for (i = 0; i < argc; i++)
-	{
-		if (argv[i] != typeof(int))
-
+	return (0);
+}
