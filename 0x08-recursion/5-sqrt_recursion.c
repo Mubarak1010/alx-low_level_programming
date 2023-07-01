@@ -29,6 +29,5 @@ int _sqt(int n, int i)
 		return (-1);
 	if (sqt == n)
 		return (i);
-	if (sqt < n)
-		return (_sqt(n, i + 1));
+	return (_sqt(n, i + 1));
 }
