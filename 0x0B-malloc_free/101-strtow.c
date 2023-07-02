@@ -29,7 +29,7 @@ int word_len(char *s)
  * Return: the number of words
  */
 
-int word_count(cahr *s)
+int word_count(char *s)
 {
 	int i = 0, words = 0, len = 0;
 
