@@ -13,53 +13,16 @@ unsigned int my_power(unsigned int num, int n);
 unsigned int binary_to_uint(const char *b)
 {
 	unsigned int value = 0;
-	int len = 0, i, j, k;
+	int i;
 
-	if (b == NULL)
+	if (!b)
 		return (0);
 
-	while (b[len] != '\0')
-		len++;
-
-	i = len - 1;
-	k = i;
-
-	for (j = 0; j <= i; j++)
+	for (i = 0; b[i]; i++)
 	{
-		if (b[j] != '1' && b[j] != '0')
+		if (b[i] < '0' || b[i] > '1')
 			return (0);
-
-		if (b[j] == '1')
-		{
-			value += my_power(2, k);
-		}
-		else if (b[j] == '0')
-		{
-			value += 0;
-		}
-		k--;
+		value = 2 * value + (b[i] - '0');
 	}
 	return (value);
-}
-
-/**
- * _power - gives the power of a number
- * @num: the number
- * @n: the power
- * Return: num raised to the power of n
- */
-
-unsigned int my_power(unsigned int num, int n)
-{
-	unsigned int power = 1;
-	int i = 1;
-
-	if (n == 0)
-		return (power);
-
-	while (i <= n)
-	{
-		power *= num;
-	}
-	return (power);
 }
